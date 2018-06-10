@@ -223,6 +223,8 @@ button {
     height: 120px;
     position: absolute;
     bottom: 0;
+    font-family: 'PT Sans';
+    font-weight: 100;
     font-size: 30px;
     color: white;
     border: 0;
