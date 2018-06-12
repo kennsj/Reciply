@@ -1,8 +1,9 @@
 * {
-    /* outline: 1px solid white; */
+    /* outline: 1px solid rgba(0,0,0, .2); */
 }
 
-html, body {
+html,
+body {
     height: auto;
 }
 
@@ -11,17 +12,28 @@ header {
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 105vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     /* background: url('https://images.unsplash.com/photo-1505233276084-d944dbc8f17d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=618086894afe9854ca3310f7f16e3e6e&auto=format&fit=crop&w=2700&q=80') no-repeat; */
-    background: url('../img/chili-con-carne.png') no-repeat;
+    /* background: url('../img/chili-con-carne.png') no-repeat; */
+    background: url('../img/food/1.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 2;
 }
 
 nav {
@@ -29,7 +41,6 @@ nav {
     width: 80vw;
     top: 5vh;
     left: 10vw;
-
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -39,19 +50,14 @@ nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    z-index: 2;
 }
 
 .recipe-header {
-    position: relative;
+    position: absolute;
     left: 10vw;
     color: white;
-}
-
-h1 {
-    font-family: 'Cormorant Infant';
-    font-size: 50px;
-    font-weight: 100;
-    margin: 10px 0 50px 0;
+    z-index: 2;
 }
 
 .recipe-info {
@@ -60,29 +66,41 @@ h1 {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
 
-.quick-info h2, h3 {
+h1 {
+    font-family: 'Arapey', serif;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 10px 0 40px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.quick-info h2,
+h3 {
     margin-right: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 h3 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    font-weight: 100;
+    font-weight: 200;
+    margin-bottom: 10px;
 }
 
-.quick-info h2 {
+h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 button {
-    right: 20vw;
-    bottom: 30px;
-    font-size: 30px;
-    z-index: 2;
+    bottom: 5vh;
+    z-index: 3;
 }
 
 section {
@@ -91,16 +109,311 @@ section {
 }
 
 article {
-    width: 70%;
+    width: 80%;
+    height: auto;
     background-color: #EDEDED;
-    padding: 50px 10% 10% 50px;
-    margin-top: -50px;
-    z-index: 1;
+    padding: 50px 5% 50px 5%;
+    margin: -5vh 0 10vh 0;
+    z-index: 2;
 }
 
-.recipe-nutrition h2 {
-    font-family: 'Cormorant Infant';
-    font-size: 30px;
-    margin-right: 10px;
-    border-right: 1px solid white;
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: 150px auto auto auto auto auto auto auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-column-gap: 40px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20%;
+    border-bottom: 1px solid #8F8F8F;
+}
+
+.nutrition-item:first-child {
+    font-family: serif;
+    height: 60px;
+    border-right: 1px solid #8F8F8F;
+    line-height: 60px;
+    margin: 0;
+    padding-right: 40px;
+}
+
+.nutrition-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    margin-bottom: 2px;
+    height: 40px;
+}
+
+.nutrition-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    color: #8F8F8F;
+    margin-bottom: 2px;
+}
+
+h5 {
+    font-family: 'Arapey', serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+.recipe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ingredients {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: calc(150px + 20%);
+    height: 100%;
+}
+
+hr {
+    position: absolute;
+    width: calc(150px + 11%);
+    border: 0.5px dashed #8F8F8F;
+    outline: none;
+}
+
+.ingredient-name h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.ingredient-name h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 80px;
+    height: 80px;
+    color: #8F8F8F;
+}
+
+.ingredient-name input {
+    position: relative;
+    left: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+label h4 {
+    display: inline-block;
+}
+
+.ingredient-value {
+    margin-top: 80px;
+}
+
+.ingredient-value h4 {
+    font-family: 'Arapey', serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    width: 150px;
+    line-height: 50px;
+}
+
+.recipe-steps {
+    max-width: 55%;
+    height: 100%;
+    margin-left: -1px;
+    padding-left: 40px;
+    border-left: 1px solid #8F8F8F;
+}
+
+.recipe-steps h5 {
+    height: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 80px;
+    color: #8F8F8F;
+}
+
+ol {
+    counter-reset: li;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+ol>li {
+    position: relative;
+    margin: 0 0 6px 2em;
+    padding: 0 10px;
+}
+
+ol>li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff;
+    background: #A73535;
+    font-weight: 300;
+    text-align: center;
+}
+
+ol li p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0 0 30px 10px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1280px) {
+    .kcal {
+        grid-area: kcal;
+    }
+    .fat {
+        grid-area: fat;
+    }
+    .carbs {
+        grid-area: carbs;
+    }
+    .sugar {
+        grid-area: sugar;
+    }
+    .fibre {
+        grid-area: fibre;
+    }
+    .protein {
+        grid-area: protein;
+    }
+    .salt {
+        grid-area: salt;
+    }
+    .nutrition-grid {
+        grid-template-areas: "nutrition-header nutrition-header nutrition-header nutrition-header nutrition-header nutrition-header nutrition-header" "kcal fat carbs sugar fibre protein salt";
+        grid-template-columns: 30px 30px 30px 30px 30px 30px 30px;
+        grid-column-gap: 20px;
+        margin: 20px 0 -10px 0;
+        padding: 0 0 20px 0;
+    }
+    .nutrition-item:first-child {
+        border-right: none;
+    }
+    .ingredients {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #8F8F8F;
+    }
+    .ingredient-value {
+        text-align: right;
+        width: 50px;
+    }
+    .ingredient-value h4 {
+        width: 100px;
+        margin-left: -50px;
+    }
+    .recipe {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .recipe-steps {
+        max-width: 100%;
+        border-left: none;
+        padding: 0;
+    }
+    ol li {
+        width: 100%
+    }
+    hr {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 18px;
+        line-height: 5px;
+    }
+    nav {
+        width: 90vw;
+        left: 5vw;
+    }
+    .nutrition-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .nutrition-item h2 {
+        font-size: 20px;
+        width: 100vw;
+    }
+    .nutrition-item h4 {
+        font-size: 10px;
+        margin-left: 12px;
+    }
+    .nutrition-item h5 {
+        font-size: 12px;
+        margin-left: 12px;
+    }
+    ol>li:before {
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        left: -33px;
+        top: -45px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    ol li p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 40px;
+        margin: 20px 0 90px -40px;
+        width: 100%;
+    }
+    ol li p:first-child {
+        margin-top: 60px;
+    }
 }
