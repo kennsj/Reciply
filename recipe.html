@@ -6,14 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css?family=Arapey" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700" rel="stylesheet">
 
     <!-- <link href="css/normalize.css" rel="stylesheet"> -->
     <link href="css/main.css" rel="stylesheet">
     <link href="css/recipe.css" rel="stylesheet">
 
-    <title>Recipe page</title>
+    <title>Recipe</title>
 </head>
 
 <body>
@@ -23,7 +41,9 @@
         <div class="header-overlay"></div>
 
         <nav>
-            <img src="img/reciply-logo.svg">
+            <a href="index.html">
+                <img src="img/reciply-logo.svg">
+            </a>
 
             <div class="hamburger">
                 <div class="inner-circle">
@@ -56,9 +76,11 @@
             </div>
         </div>
 
-        <button>Recipe
-            <img src="img/arrow-down.svg">
-        </button>
+        <a data-scroll href="#recipe">
+            <button>Recipe
+                <img src="img/arrow-down.svg">
+            </button>
+        </a>
 
     </header>
 
@@ -67,34 +89,34 @@
         <article id="recipe">
 
             <div class="nutrition-grid">
-                <div class="nutrition-item">
+                <div class="nutrition-item nutrition-header">
                     <h2>Nutritions</h2>
                 </div>
-                <div class="nutrition-item">
+                <div class="nutrition-item kcal">
                     <h4>Kcal</h4>
                     <h5>200</h5>
                 </div>
-                <div class="nutrition-item">
+                <div class="nutrition-item fat">
                     <h4>Fat</h4>
                     <h5>5g</h5>
                 </div>
-                <div class="nutrition-item">
+                <div class="nutrition-item carbs">
                     <h4>Carbs</h4>
                     <h5>40g</h5>
                 </div>
-                <div class="nutrition-item">
+                <div class="nutrition-item sugar">
                     <h4>Sugar</h4>
                     <h5>7g</h5>
                 </div>
-                <div class="nutrition-item">
+                <div class="nutrition-item fibre">
                     <h4>Fibre</h4>
                     <h5>4g</h5>
                 </div>
-                <div class="nutrition-item">
+                <div class="nutrition-item protein">
                     <h4>Protein</h4>
                     <h5>6g</h5>
                 </div>
-                <div class="nutrition-item">
+                <div class="nutrition-item salt">
                     <h4>Salt</h4>
                     <h5>0.4g</h5>
                 </div>
@@ -106,6 +128,9 @@
 
                     <div class="ingredient-name">
                         <h5>Ingredients</h5>
+
+                        <!-- <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+                        <label for="subscribeNews"><h4>Subscribe to newsletter?</h4></label> -->
 
                         <h4>Medium onions</h4>
                         <hr>
@@ -143,6 +168,47 @@
 
                 <div class="recipe-steps">
 
+                    <h5>Process</h5>
+
+                    <ol type="1">
+                        <li>
+                            <p>Peel and finely chop the onions, garlic, carrots and celery – don’t worry about the technique,
+                                just chop away until fine. Halve the red peppers, remove the stalks and seeds and roughly
+                                chop.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>Heat 2 tablespoons of oil in a large casserole pan on a medium-high heat, add the chopped veg,
+                                chilli powder, cumin, cinnamon and a good pinch of sea salt and black pepper, then cook for
+                                7 minutes, or until softened, stirring regularly.</p>
+                        </li>
+
+                        <li>
+                            <p>Drain and add the chickpeas and kidney beans, tip in the tomatoes, breaking them up with the
+                                back of a spoon, then pour in 1 tin's worth of water. Add the minced beef, breaking any larger
+                                chunks.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>Pick the coriander leaves and put aside, then finely chop and add the stalks to the pan, with
+                                the balsamic vinegar. Season with a good pinch of sea salt and black pepper.</p>
+                        </li>
+
+                        <li>
+                            <p>Bring to the boil, then reduce the heat to low and simmer with a lid slightly ajar for 1 hour,
+                                or until slightly thickened and reduced, stirring occasionally.</p>
+                        </li>
+
+                        <li>
+                            <p>Serve up with fluffy rice or couscous, a hunk of crusty bread, or over a jacket potato, with
+                                some yoghurt, guacamole, and wedges of lime on the side for squeezing over. Sprinkle over
+                                the reserved coriander, and some fresh chilli, if you like, then tuck in.
+                            </p>
+                        </li>
+                    </ol>
+
                 </div>
 
             </div>
@@ -152,6 +218,9 @@
 
     </section>
 
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/berba.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

@@ -51,6 +51,7 @@ nav {
     background-color: #45476B;
     -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+    cursor: pointer;
     -webkit-transform: scale(.8);
     transform: scale(.8);
     transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
@@ -177,6 +178,14 @@ input[placeholder^="Search..."] {
     color: rgba(255, 255, 255, .5);
 }
 
+input[placeholder]:focus {
+    color: white;
+}
+
+input[placeholder]:active {
+    color: white;
+}
+
 .input-text {
     position: absolute;
     right: calc(25% - 2vw);
@@ -192,18 +201,8 @@ input[placeholder^="Search..."] {
 .text-divider {
     width: 1px;
     padding: 8px 0;
-    margin: 0 3px;
+    margin: 0 8px;
     border: .5px solid white;
-}
-
-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
 }
 
 button {
@@ -219,12 +218,14 @@ button {
     width: 460px;
     height: 120px;
     position: absolute;
+    right: 20vw;
     bottom: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 30px;
     color: white;
     border: 0;
+    cursor: pointer;
     -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
     background: #202342;
@@ -234,6 +235,10 @@ button {
     -o-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
     -moz-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
     -webkit-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+a {
+    cursor: pointer;
 }
 
 button img {
@@ -269,4 +274,82 @@ button:hover>img {
 
 button:focus {
     outline: 0
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1280px) {
+    input {
+        height: 75px;
+        font-size: 30px;
+    }
+    button {
+        font-size: 20px;
+        width: 35%;
+        height: 100px;
+        right: 10vw;
+    }
+    button img {
+        width: 7px;
+        margin: 5px 0 0 30px;
+    }
+    .input-text {
+        line-height: 75px;
+    }
+    .text-divider {
+        padding: 8px 0;
+        margin: 0 8px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav img {
+        transform: scale(.6)
+    }
+    .hamburger {
+        transform: scale(.5)
+    }
+    button {
+        font-size: 15px;
+        line-height: 20px;
+        width: 30%;
+        height: 60px;
+        right: 10vw;
+    }
+    button img {
+        width: 5px;
+        margin: 3px 0 0 20px;
+    }
+    input {
+        height: 50px;
+        width: 80%;
+        left: 10%;
+        font-size: 15px;
+    }
+    .input-text {
+        line-height: 50px;
+        font-size: 12px;
+        right: calc(15% - 2vw);
+    }
+    .text-divider {
+        padding: 8px 0;
+        margin: 0 8px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        width: 95vw;
+        left: 2.5vw;
+    }
+    button {
+        width: 200px;
+        left: calc(50% - 100px);
+    }
+    input-text {
+        display: none;
+    }
+    .text-divider {
+        display: none;
+    }
 }
