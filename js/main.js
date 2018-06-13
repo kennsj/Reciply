@@ -1,6 +1,6 @@
-window.onload = function setFocusToTextBox() {
-    searchBar.focus();
-}
+// window.onload = function setFocusToTextBox() {
+//     searchBar.focus();
+// }
 
 // Barba.Pjax.start();
 
@@ -13,10 +13,6 @@ const dropdown = document.querySelector('.dropdown')
 
 hamburger.addEventListener('mouseup', function(){
     
-    // firstLine.style.margin = '0'
-    // secondLine.style.margin = '0'
-
-    // firstLine.classList.toggle('collapse')
     secondLine.classList.toggle('collapse')
     // menu.classList.toggle('open-menu')
     
