@@ -598,6 +598,12 @@ button:focus {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    section h1 {
+        font-size: 35px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     nav img {
         -webkit-transform: scale(.6);
@@ -661,6 +667,9 @@ button:focus {
         left: 10%;
         font-size: 14px;
     }
+    section h1 {
+        font-size: 30px;
+    }
     .input-text {
         line-height: 50px;
         font-size: 12px;
@@ -683,6 +692,9 @@ button:focus {
     header {
         width: 95vw;
         left: 2.5vw;
+    }
+    section h1 {
+        font-size: 25px;
     }
     button {
         width: 200px;
@@ -734,12 +746,21 @@ button:focus {
     }
 }
 
+@media screen and (max-width: 500px) {
+    section h1 {
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 450px) {
     #search_inputs {
         background: url('../img/search-icon.svg') no-repeat 12px;
         background-size: 12px;
         margin: 0;
         padding: 0 150px 0 36px;
+    }
+    section h1 {
+        font-size: 18px;
     }
     .input-text {
         right: 7%;
@@ -754,5 +775,11 @@ button:focus {
     #search_inputs:focus~span {
         -webkit-transform: translateY(-20vh);
         transform: translateY(-22vh);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    section h1 {
+        font-size: 15px;
     }
 }
