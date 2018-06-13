@@ -55,6 +55,21 @@ nav {
     z-index: 2;
 }
 
+.inner-circle img {
+    transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.inner-circle:hover>img {
+    transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: .8s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateX(-5px)
+}
+
 .recipe-header {
     position: absolute;
     left: 10vw;
@@ -202,7 +217,12 @@ hr {
 }
 
 .ingredient-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -366,6 +386,9 @@ ol li p {
         width: 100px;
         margin-left: -50px;
     }
+    article {
+        width: 90%;
+    }
     .recipe {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -434,7 +457,10 @@ ol li p {
 
 @media screen and (max-width: 500px) {
     .nutrition-grid {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
     .nutrition-item h2 {

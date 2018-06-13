@@ -45,12 +45,14 @@
                 <img src="img/reciply-logo.svg">
             </a>
 
-            <div class="hamburger">
-                <div class="inner-circle">
-                    <div class="line first"></div>
-                    <div class="line second"></div>
+            <a href="index.html">
+                <div class="hamburger">
+                    <div class="inner-circle">
+                        <img src="img/arrow-back.svg">
+                    </div>
                 </div>
-            </div>
+            </a>
+
         </nav>
 
         <div class="recipe-header">
@@ -279,7 +281,10 @@
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/berba.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/recipe.js"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 
 </body>
 
