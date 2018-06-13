@@ -1,4 +1,4 @@
 # Reciply
-Find your dinner quickly and randomly
+Find new recipes quickly and randomly
 
 [Link](https://kennsj.github.io/Reciply/)
